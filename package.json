@@ -1,0 +1,28 @@
+{
+  "name": "pulse",
+  "version": "1.0.0",
+  "description": "A real-time chat app made using websockets",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "poststart": "google-chrome index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nirantak/pulse.git"
+  },
+  "author": "Nirantak Raghav",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/nirantak/pulse/issues"
+  },
+  "homepage": "https://github.com/nirantak/pulse#readme",
+  "engines": {
+    "node": "9.8.x"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongodb": "^2.2.30",
+    "socket.io": "^2.0.3"
+  }
+}
