@@ -1,6 +1,8 @@
 .DS_Store
 .vscode
 README.html
+settings.json
+*.tar.gz
 
 # Logs
 logs

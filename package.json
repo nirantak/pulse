@@ -1,28 +1,39 @@
 {
-  "name": "pulse",
-  "version": "1.0.0",
-  "description": "A real-time chat app made using websockets",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "poststart": "google-chrome index.html"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nirantak/pulse.git"
-  },
-  "author": "Nirantak Raghav",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/nirantak/pulse/issues"
-  },
-  "homepage": "https://github.com/nirantak/pulse#readme",
-  "engines": {
-    "node": "9.8.x"
-  },
-  "dependencies": {
-    "express": "^4.16.3",
-    "mongodb": "^2.2.30",
-    "socket.io": "^2.0.3"
-  }
+	"name": "pulse",
+	"private": true,
+	"version": "2.0.0",
+	"description": "A real-time chat app made using websockets",
+	"main": "client/scripts/lib/app.js",
+	"scripts": {
+		"start": "meteor run",
+		"build": "meteor build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nirantak/pulse.git"
+	},
+	"author": "Nirantak Raghav",
+	"license": "GPL-3.0",
+	"bugs": {
+		"url": "https://github.com/nirantak/pulse/issues"
+	},
+	"homepage": "https://github.com/nirantak/pulse#readme",
+	"engines": {
+		"node": "9.8.x"
+	},
+	"dependencies": {
+		"@babel/runtime": "^7.0.0-beta.36",
+		"angular": "^1.6.9",
+		"angular-animate": "^1.6.9",
+		"angular-ecmascript": "0.0.3",
+		"angular-meteor": "^1.3.12",
+		"angular-meteor-auth": "^1.1.1",
+		"angular-moment": "^1.2.0",
+		"angular-sanitize": "^1.6.9",
+		"angular-ui-router": "^0.3.2",
+		"babel-runtime": "^6.26.0",
+		"ionic-scripts": "^1.3.5",
+		"meteor-node-stubs": "^0.3.2",
+		"moment": "^2.21.0"
+	}
 }
