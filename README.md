@@ -20,7 +20,7 @@ $ git clone https://github.com/nirantak/pulse.git && cd pulse
 Install necessary dependencies
 
 ```bash
-$ npm install
+$ meteor npm install
 ```
 
 ### Usage
@@ -28,13 +28,14 @@ $ npm install
 Start the Server
 
 ```bash
-$ npm start
+$ meteor run
 ```
 
 ### Requirements
 
 1. [MongoDB](https://www.mongodb.com/)
 2. [NodeJS](https://nodejs.org/)
+3. [Meteor](https://www.meteor.com/)
 
 ### License
 

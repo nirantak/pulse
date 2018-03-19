@@ -13,9 +13,17 @@ import { Meteor } from "meteor/meteor";
 // Modules
 import ChatsCtrl from "../controllers/chats.controller";
 import ChatCtrl from "../controllers/chat.controller";
+import ConfirmationCtrl from "../controllers/confirmation.controller";
+import LoginCtrl from "../controllers/login.controller";
+import NewChatCtrl from "../controllers/new-chat.controller";
+import ProfileCtrl from "../controllers/profile.controller";
+import SettingsCtrl from "../controllers/settings.controller";
 import InputDirective from "../directives/input.directive";
 import CalendarFilter from "../filters/calendar.filter";
-import RoutesConfig from "../routes";
+import ChatNameFilter from "../filters/chat-name.filter";
+import ChatPictureFilter from "../filters/chat-picture.filter";
+import NewChatService from "../services/new-chat.service";
+import Routes from "../routes";
 
 const App = "Pulse";
 
@@ -30,9 +38,17 @@ Angular.module(App, [
 new Loader(App)
 	.load(ChatsCtrl)
 	.load(ChatCtrl)
+	.load(ConfirmationCtrl)
+	.load(LoginCtrl)
+	.load(NewChatCtrl)
+	.load(ProfileCtrl)
+	.load(SettingsCtrl)
 	.load(InputDirective)
 	.load(CalendarFilter)
-	.load(RoutesConfig);
+	.load(ChatNameFilter)
+	.load(ChatPictureFilter)
+	.load(NewChatService)
+	.load(Routes);
 
 // Startup
 if (Meteor.isCordova) {
