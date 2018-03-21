@@ -1,4 +1,8 @@
 <ion-view view-title="Settings">
+	<ion-nav-buttons side="right">
+		<a href="#!/tab/chats" class="button button-clear button-positive">Home</a>
+	</ion-nav-buttons>
+
 	<ion-content>
 		<ion-list>
 			<ion-item href="#!/profile" class="item-icon-right">
@@ -6,7 +10,7 @@
 				<i class="icon ion-chevron-right icon-accessory"></i>
 			</ion-item>
 			<ion-item>
-				<div class="padding text-center">
+				<div class="text-center">
 					<button ng-click="settings.logout()" class="button button-clear button-assertive">Logout</button>
 				</div>
 			</ion-item>
