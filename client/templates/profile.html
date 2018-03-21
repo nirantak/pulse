@@ -7,7 +7,7 @@
 	</ion-nav-buttons>
 
 	<ion-content class="profile">
-		<a class="profile-picture positive" ng-click="profile.updatePicture()">
+		<a class="profile-picture positive" id="profile-pic-box" ng-click="profile.updatePicture()">
 			<div ng-if="profile.currentUser.profile.picture">
 				<img ng-src="{{ profile.currentUser.profile.picture }}" alt="profile picture"> edit
 			</div>
@@ -17,7 +17,7 @@
 		</a>
 
 		<div class="instructions">
-			Enter your name and add an optional profile picture
+			Edit your name, status and an optional profile picture
 		</div>
 
 		<div class="list profile-name">
