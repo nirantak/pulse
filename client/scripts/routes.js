@@ -4,6 +4,7 @@ import { Config, Runner } from "angular-ecmascript/module-helpers";
 
 import chatsTemplateUrl from "../templates/chats.html";
 import chatTemplateUrl from "../templates/chat.html";
+import contactsTemplateUrl from "../templates/contacts.html";
 import confirmationTemplateUrl from "../templates/confirmation.html";
 import loginTemplateUrl from "../templates/login.html";
 import profileTemplateUrl from "../templates/profile.html";
@@ -27,6 +28,15 @@ class RoutesConfig extends Config {
 					user: this.isAuthorized,
 					chats() {
 						return Meteor.subscribe("chats");
+					}
+				}
+			})
+			.state("tab.contacts", {
+				url: "/contacts",
+				views: {
+					"tab-contacts": {
+						templateUrl: contactsTemplateUrl,
+						controller: "ContactsCtrl as contacts"
 					}
 				}
 			})

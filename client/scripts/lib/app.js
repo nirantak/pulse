@@ -13,6 +13,7 @@ import { Meteor } from "meteor/meteor";
 // Modules
 import ChatsCtrl from "../controllers/chats.controller";
 import ChatCtrl from "../controllers/chat.controller";
+import ContactsCtrl from "../controllers/contacts.controller";
 import ConfirmationCtrl from "../controllers/confirmation.controller";
 import LoginCtrl from "../controllers/login.controller";
 import NewChatCtrl from "../controllers/new-chat.controller";
@@ -21,6 +22,7 @@ import SettingsCtrl from "../controllers/settings.controller";
 import InputDirective from "../directives/input.directive";
 import CalendarFilter from "../filters/calendar.filter";
 import ChatNameFilter from "../filters/chat-name.filter";
+import ChatStatusFilter from "../filters/chat-status.filter";
 import ChatPictureFilter from "../filters/chat-picture.filter";
 import NewChatService from "../services/new-chat.service";
 import Routes from "../routes";
@@ -38,6 +40,7 @@ Angular.module(App, [
 new Loader(App)
 	.load(ChatsCtrl)
 	.load(ChatCtrl)
+	.load(ContactsCtrl)
 	.load(ConfirmationCtrl)
 	.load(LoginCtrl)
 	.load(NewChatCtrl)
@@ -46,6 +49,7 @@ new Loader(App)
 	.load(InputDirective)
 	.load(CalendarFilter)
 	.load(ChatNameFilter)
+	.load(ChatStatusFilter)
 	.load(ChatPictureFilter)
 	.load(NewChatService)
 	.load(Routes);

@@ -5,23 +5,11 @@ Meteor.startup(function() {
 	if (Meteor.users.find().count() != 0) return;
 
 	Accounts.createUserWithPhone({
-		phone: "+972501234567",
+		phone: "+919876543210",
 		profile: {
-			name: "My friend 1"
+			name: "Pulse Support",
+			status: "Contact for support."
 		}
 	});
 
-	Accounts.createUserWithPhone({
-		phone: "+972501234568",
-		profile: {
-			name: "My friend 2"
-		}
-	});
-
-	Accounts.createUserWithPhone({
-		phone: "+972501234569",
-		profile: {
-			name: "My friend 3"
-		}
-	});
 });

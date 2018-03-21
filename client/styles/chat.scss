@@ -10,7 +10,9 @@
 	background-image: url(/chat-background.jpg);
 	background-color: #e0dad6;
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
 }
 
 .message-list {

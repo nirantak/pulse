@@ -8,6 +8,7 @@ export default class ProfileCtrl extends Controller {
 
 		const profile = this.currentUser && this.currentUser.profile;
 		this.name = profile ? profile.name : "";
+		this.status = profile ? profile.status : "";
 	}
 
 	updatePicture() {
@@ -29,6 +30,15 @@ export default class ProfileCtrl extends Controller {
 		if (_.isEmpty(this.name)) return;
 
 		this.callMethod("updateName", this.name, err => {
+			if (err) return this.handleError(err);
+			this.$state.go("tab.chats");
+		});
+	}
+
+	updateStatus() {
+		if (_.isEmpty(this.status)) return;
+
+		this.callMethod("updateStatus", this.status, err => {
 			if (err) return this.handleError(err);
 			this.$state.go("tab.chats");
 		});

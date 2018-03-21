@@ -1,6 +1,9 @@
 <ion-view title="Profile">
+	<ion-nav-buttons side="left">
+		<a href="#!/tab/settings" class="button button-clear button-positive">&lt; Go Back</a>
+	</ion-nav-buttons>
 	<ion-nav-buttons side="right">
-		<button ng-click="profile.updateName()" ng-disabled="!profile.name || profile.name.length === 0" class="button button-clear button-positive">Done</button>
+		<a href="#!/tab/chats" class="button button-clear button-positive">Home</a>
 	</ion-nav-buttons>
 
 	<ion-content class="profile">
@@ -21,6 +24,13 @@
 			<label class="item item-input">
 				<input ng-model="profile.name" on-return="profile.updateName()" type="text" placeholder="Your name">
 			</label>
+			<button ng-click="profile.updateName()" ng-disabled="!profile.name || profile.name.length === 0" class="button button-clear button-positive">Update Name</button>
+		</div>
+		<div class="list profile-status">
+			<label class="item item-input">
+				<input ng-model="profile.status" on-return="profile.updateStatus()" type="text" placeholder="Your status...">
+			</label>
+			<button ng-click="profile.updateStatus()" ng-disabled="!profile.status || profile.status.length === 0" class="button button-clear button-positive">Update Status</button>
 		</div>
 	</ion-content>
 </ion-view>

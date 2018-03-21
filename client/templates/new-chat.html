@@ -11,7 +11,7 @@
 			<a ng-repeat="user in chat.users" ng-click="chat.newChat(user._id)" class="item">
 				<h2>{{ user.profile.name }}</h2>
 				<p>
-					Hey there! I am using Pulse.
+					 {{ user.profile.status }}
 				</p>
 			</a>
 		</div>
