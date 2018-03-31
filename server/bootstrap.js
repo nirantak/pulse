@@ -9,7 +9,8 @@ Meteor.startup(function() {
 		profile: {
 			name: "Pulse Support",
 			status: "Contact for support."
-		}
+		},
+		moderator: true
 	});
 
 });

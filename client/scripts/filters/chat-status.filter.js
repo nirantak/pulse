@@ -14,4 +14,4 @@ export default class ChatStatusFilter extends Filter {
 	}
 }
 
-ChatStatusFilter.$status = "chatStatus";
+ChatStatusFilter.$name = "chatStatus";

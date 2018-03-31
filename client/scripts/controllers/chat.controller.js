@@ -15,12 +15,14 @@ export default class ChatCtrl extends Controller {
 
 		this.helpers({
 			messages() {
-				return Messages.find({
-					chatId: this.chatId
-				});
+				return Messages.find({ chatId: this.chatId });
 			},
 			data() {
 				return Chats.findOne(this.chatId);
+			},
+			isMod() {
+				const user_mod = Meteor.users.findOne({ _id: Meteor.userId() });
+				return user_mod.profile.moderator;
 			}
 		});
 
@@ -46,6 +48,41 @@ export default class ChatCtrl extends Controller {
 			text: this.message,
 			type: "text",
 			chatId: this.chatId
+		});
+
+		delete this.message;
+	}
+
+	broadcastMessage() {
+		bmessage = this.message;
+		if (_.isEmpty(bmessage)) return;
+
+		const users = Meteor.users.find();
+		users.forEach(function(user) {
+			if (Meteor.userId() != user._id) {
+				let chat_id;
+				let chat = Chats.findOne({
+					userIds: {
+						$all: [Meteor.userId(), user._id]
+					}
+				});
+
+				if (chat) {
+					chat_id = chat._id;
+				} else {
+					Meteor.call("newChat", user._id, (err, chatID) => {
+						if (err) return this.handleError(err);
+						chat_id = chatID;
+					});
+				}
+
+				Meteor.call("newBroadcast", {
+					text: bmessage,
+					type: "text",
+					chatId: chat_id,
+					broadcast: true
+				});
+			}
 		});
 
 		delete this.message;
@@ -106,4 +143,10 @@ export default class ChatCtrl extends Controller {
 }
 
 ChatCtrl.$name = "ChatCtrl";
-ChatCtrl.$inject = ['$stateParams', '$timeout', '$ionicScrollDelegate', '$ionicPopup', '$log'];
+ChatCtrl.$inject = [
+	"$stateParams",
+	"$timeout",
+	"$ionicScrollDelegate",
+	"$ionicPopup",
+	"$log"
+];

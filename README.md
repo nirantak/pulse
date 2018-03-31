@@ -1,6 +1,6 @@
 # Pulse - Group Messaging Platform
 
-> *A real-time chat application built using Websockets*
+> *A real-time chat application built using Meteor, Angular/Ionic and MongoDB*
 
 ### Table of Contents
 

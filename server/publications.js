@@ -2,7 +2,7 @@ import { Meteor } from "meteor/meteor";
 import { Chats, Messages } from "../lib/collections";
 
 Meteor.publish("users", function() {
-	return Meteor.users.find({}, { fields: { profile: 1 } });
+	return Meteor.users.find({}, { fields: { profile: 1, moderator: 1 } });
 });
 
 Meteor.publishComposite("chats", function() {

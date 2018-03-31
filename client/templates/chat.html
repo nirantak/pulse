@@ -7,7 +7,8 @@
 	<ion-content class="chat" delegate-handle="chatScroll">
 		<div class="message-list">
 			<div ng-repeat="message in chat.messages" class="message-wrapper">
-				<div class="message" ng-class="message.userId === $root.currentUser._id ? 'message-mine' : 'message-other'">
+				<div class="message" ng-class="(message.userId === $root.currentUser._id ? 'message-mine' : 'message-other')">
+					<div id="broadcast_msg" ng-if="message.broadcast">Moderator</div>
 					<ng-switch on="message.type">
 						<div ng-switch-when="text" class="text">{{ message.text }}</div>
 						<div ng-switch-when="picture" class="picture">
@@ -20,19 +21,19 @@
 		</div>
 	</ion-content>
 	<ion-footer-bar keyboard-attach class="bar-stable footer-chat item-input-inset">
-		<button class="button button-clear button-icon button-positive icon ion-ios-upload-outline"></button>
+		<button class="button button-clear button-icon button-positive icon ion-ios-keypad"></button>
 	
 		<label class="item-input-wrapper">
 			<input ng-model="chat.message" dir="auto" type="text" on-return="chat.sendMessage(); chat.closeKeyboard()" on-focus="chat.inputUp()" on-blur="chat.inputDown()" />
 		</label>
 	
 		<span ng-if="chat.message.length > 0">
-			<button ng-click="chat.sendMessage()" class="button button-clear button-positive">Send</button>
+			<button ng-click="chat.sendMessage()" class="button button-clear button-positive" title="Private Message">Send</button>
+			<i ng-if="chat.isMod" class="buttons-seperator icon ion-android-more-vertical"></i>
+			<button ng-if="chat.isMod" ng-click="chat.broadcastMessage()" class="button button-clear button-positive" title="Broadcast to all">Broadcast</button>
 		</span>
 		<span ng-if="!chat.message || chat.message.length === 0">
 			<button ng-click="chat.sendPicture()" class="button button-clear button-icon button-positive icon ion-ios-camera-outline"></button>
-			<i class="buttons-seperator icon ion-android-more-vertical"></i>
-			<button class="button button-clear button-icon button-positive icon ion-ios-mic-outline"></button>
 		</span>
 	</ion-footer-bar>
 </ion-view>
