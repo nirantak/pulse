@@ -1,13 +1,19 @@
 # Pulse - Group Messaging Platform
 
-> *A real-time chat application built using Meteor, Angular/Ionic and MongoDB*
+> *A real-time chat application built using Meteor, AngularJS/Ionic and MongoDB*
 
 ### Table of Contents
 
+* [Introduction](#introduction)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Requirements](#requirements)
 * [License](#license)
+
+### Introduction
+
+* Objective - Project for Software Engineering (SE) in Semester 6
+* Planning/Modeling - [Docs](https://github.com/nirantak/pulse/tree/master/docs)
 
 ### Installation
 
