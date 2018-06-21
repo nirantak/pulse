@@ -19,7 +19,8 @@
 	},
 	"homepage": "https://github.com/nirantak/pulse#readme",
 	"engines": {
-		"node": "9.8.x"
+		"node": ">=10.5.0",
+		"npm": "~6.1.0"
 	},
 	"dependencies": {
 		"@babel/runtime": "^7.0.0-beta.36",
