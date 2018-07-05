@@ -5,15 +5,21 @@
 ### Table of Contents
 
 * [Introduction](#introduction)
+* [Requirements](#requirements)
 * [Installation](#installation)
 * [Usage](#usage)
-* [Requirements](#requirements)
 * [License](#license)
 
 ### Introduction
 
 * Objective - Project for Software Engineering (SE) in Semester 6
 * Planning/Modeling - [Docs](https://github.com/nirantak/pulse/tree/master/docs)
+
+### Requirements
+
+1. [NodeJS](https://nodejs.org/)
+2. [Meteor](https://www.meteor.com/)
+3. [MongoDB](https://www.mongodb.com/)
 
 ### Installation
 
@@ -36,12 +42,6 @@ Start the Server
 ```bash
 $ meteor run
 ```
-
-### Requirements
-
-1. [MongoDB](https://www.mongodb.com/)
-2. [NodeJS](https://nodejs.org/)
-3. [Meteor](https://www.meteor.com/)
 
 ### License
 
