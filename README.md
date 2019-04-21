@@ -4,16 +4,18 @@
 
 ### Table of Contents
 
-* [Introduction](#introduction)
-* [Requirements](#requirements)
-* [Installation](#installation)
-* [Usage](#usage)
-* [License](#license)
+- [Pulse - Group Messaging Platform](#pulse---group-messaging-platform)
+    - [Table of Contents](#table-of-contents)
+    - [Introduction](#introduction)
+    - [Requirements](#requirements)
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [License](#license)
 
 ### Introduction
 
-* Objective - Project for Software Engineering (SE) in Semester 6
-* Planning/Modeling - [Docs](https://github.com/nirantak/pulse/tree/master/docs)
+- Objective - Project for Software Engineering (SE) in Semester 6
+- Planning/Modeling - [Docs](https://github.com/nirantak/pulse/tree/master/docs)
 
 ### Requirements
 
