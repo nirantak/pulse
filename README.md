@@ -14,7 +14,7 @@
 
 ### Introduction
 
-- Objective - Project for Software Engineering (SE) in Semester 6
+- Objective - Project for BE Course
 - Planning/Modeling - [Docs](https://github.com/nirantak/pulse/tree/master/docs)
 
 ### Requirements

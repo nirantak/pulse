@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/nirantak/pulse#readme",
   "engines": {
-    "node": "11.14.0",
+    "node": "12.0.0",
     "npm": "6.9.0"
   },
   "dependencies": {
